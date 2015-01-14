@@ -1,53 +1,54 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>JBoss template</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>JBoss template</title>
 </head>
 
 <body>
 
-	<h3>DeveloperGreeter</h3>
-	<div id="container">
-	<h:messages styleClass="messages" layout="table" />
-		<h:form id="userForm">
-			<h:panelGrid columns="3">
-				<h:outputLabel>Name:</h:outputLabel>
-				<h:inputText value="#{name}" /><br/>
-				<h:outputLabel>Lastname:</h:outputLabel>
-				<h:inputText value="#{lastname}" /><br/>
-				<h:commandButton id="add" value="Add"
-					action="#{developerBean.addDeveloper(name,lastname)}">
-				</h:commandButton>
-				<h:commandButton id="get" value="Get"
-					action="#{developerBean.getDeveloper(name,lastname)}">
-				</h:commandButton>
-				<h:commandButton id="remove" value="Remove"
-					action="#{developerBean.removeDeveloper(name,lastname)}">
-				</h:commandButton>
-				<h:commandButton id="Refresh" value="refresh"
-					action="#{developerBean.refresh}">
-				</h:commandButton>
-				
-			</h:panelGrid>
-			
-		</h:form>
-		<h:dataTable value="#{developerBean.devList}" var="dev" rendered="#{developerBean.devList.size() > 0}">
-			<h:column>
-				<f:facet name="header">Name</f:facet>
-    				#{dev.name}
-    			</h:column>
-			<h:column>
-				<f:facet name="header">LastName</f:facet>
-    				#{dev.lastname}
-    			</h:column>
+<h3>DeveloperGreeter</h3>
 
-		</h:dataTable>
-	</div>
+<div id="container">
+    <h:messages styleClass="messages" layout="table"/>
+    <h:form id="userForm">
+        <h:panelGrid columns="3">
+            <h:outputLabel>Name:</h:outputLabel>
+            <h:inputText value="#{name}"/><br/>
+            <h:outputLabel>Lastname:</h:outputLabel>
+            <h:inputText value="#{lastname}"/><br/>
+            <h:commandButton id="add" value="Add"
+                             action="#{developerBean.addDeveloper(name,lastname)}">
+            </h:commandButton>
+            <h:commandButton id="get" value="Get"
+                             action="#{developerBean.getDeveloper(name,lastname)}">
+            </h:commandButton>
+            <h:commandButton id="remove" value="Remove"
+                             action="#{developerBean.removeDeveloper(name,lastname)}">
+            </h:commandButton>
+            <h:commandButton id="Refresh" value="refresh"
+                             action="#{developerBean.refresh}">
+            </h:commandButton>
+
+        </h:panelGrid>
+
+    </h:form>
+    <h:dataTable value="#{developerBean.devList}" var="dev" rendered="#{developerBean.devList.size() > 0}">
+        <h:column>
+            <f:facet name="header">Name</f:facet>
+            #{dev.name}
+        </h:column>
+        <h:column>
+            <f:facet name="header">LastName</f:facet>
+            #{dev.lastname}
+        </h:column>
+
+    </h:dataTable>
+</div>
 
 </body>
 </html>

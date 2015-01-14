@@ -2,7 +2,7 @@ package com.shulga.model;
 
 public interface HasId {
 
-	Long getId();
+    Long getId();
 
-	void setId(Long id);
+    void setId(Long id);
 }

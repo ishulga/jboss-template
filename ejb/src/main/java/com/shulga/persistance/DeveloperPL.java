@@ -4,8 +4,8 @@ import com.shulga.model.Developer;
 
 public class DeveloperPL extends GenericPL<Developer> {
 
-	public DeveloperPL() {
-		super(Developer.class);
-	}
-	
+    public DeveloperPL() {
+        super(Developer.class);
+    }
+
 }

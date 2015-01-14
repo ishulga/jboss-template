@@ -8,11 +8,11 @@
     <packaging>ear</packaging>
 
     <licenses>
-       <license>
-          <name>Apache License, Version 2.0</name>
-          <distribution>repo</distribution>
-          <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
-       </license>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <distribution>repo</distribution>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+        </license>
     </licenses>
 
     <parent>
@@ -68,7 +68,7 @@
                 <artifactId>jboss-as-maven-plugin</artifactId>
                 <version>7.1.1.Final</version>
                 <configuration>
-                <address></address>
+                    <address></address>
                     <filename>jboss-app.ear</filename>
                     <skip>false</skip>
                 </configuration>
